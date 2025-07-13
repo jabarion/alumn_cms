@@ -1,0 +1,128 @@
+/* KSU Theme Colors */
+:root {
+    --ksu-gold: #ffb700;
+    --ksu-black: #000000;
+    --ksu-gray: #f4f4f4;
+    --ksu-text: #333;
+    --ksu-white: #ffffff;
+}
+
+/* General body layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--ksu-gray);
+    color: var(--ksu-text);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h1, h2 {
+    background-color: var(--ksu-black);
+    color: var(--ksu-gold);
+    padding: 20px;
+    margin: 0;
+}
+
+/* Navigation Menu */
+ul {
+    list-style-type: none;
+    padding: 20px;
+    background-color: var(--ksu-black);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+ul li {
+    margin: 0;
+}
+
+ul li a {
+    color: var(--ksu-gold);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: var(--ksu-black);
+    border: 2px solid var(--ksu-gold);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul li a:hover {
+    background-color: var(--ksu-gold);
+    color: var(--ksu-black);
+}
+
+/* Form styling */
+form {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--ksu-white);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+form input, form select, form textarea, form button {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--ksu-black);
+    color: var(--ksu-gold);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--ksu-gold);
+    color: var(--ksu-black);
+}
+
+/* Table styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--ksu-white);
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--ksu-black);
+    color: var(--ksu-gold);
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.ksu-back-link {
+    display: inline-block;
+    background-color: #FFC61E; /* KSU gold */
+    color: #000;               /* Black text */
+    font-weight: bold;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.ksu-back-link:hover {
+    background-color: #e6b800;
+    color: #111;
+}
