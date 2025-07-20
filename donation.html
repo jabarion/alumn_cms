@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donation Entry Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #confirmation {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Donation Entry</h2>
+  <form id="donationForm">
+    <label for="alumniID">Alumni ID:</label>
+    <input type="number" id="alumniID" name="alumniID" required>
+
+    <label for="amount">Donation Amount ($):</label>
+    <input type="number" id="amount" name="amount" step="0.01" required>
+
+    <label for="date">Donation Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="reason">Donation Reason:</label>
+    <textarea id="reason" name="reason" rows="4" required></textarea>
+
+    <button type="submit" class="submit-btn">Submit Donation</button>
+  </form>
+
+  <div id="confirmation">Donation recorded successfully!</div>
+
+  <script>
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual submission
+      document.getElementById('confirmation').style.display = 'block';
+      this.reset(); // Optional: clear the form
+    });
+  </script>
+
+</body>
+</html>
