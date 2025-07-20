@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Address Entry Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #confirmation {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Address Entry</h2>
+  <form id="addressForm">
+    <label for="alumniID">Alumni ID:</label>
+    <input type="number" id="alumniID" name="alumniID" required>
+
+    <label for="address">Street Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" maxlength="2" required>
+
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" maxlength="10" required>
+
+    <label for="primary">Primary Address:</label>
+    <select id="primary" name="primary">
+      <option value="Y">Yes</option>
+      <option value="N">No</option>
+    </select>
+
+    <label for="active">Active:</label>
+    <select id="active" name="active">
+      <option value="Y">Yes</option>
+      <option value="N">No</option>
+    </select>
+
+    <button type="submit" class="submit-btn">Submit Address</button>
+  </form>
+
+  <div id="confirmation">Submitted changes successfully!</div>
+
+  <script>
+    document.getElementById('addressForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+      document.getElementById('confirmation').style.display = 'block';
+      this.reset(); // Optional: Clear form after submission
+    });
+  </script>
+
+</body>
+</html>
